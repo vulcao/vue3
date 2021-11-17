@@ -1,14 +1,8 @@
 <template>
-    <div id="menu">
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/page">Pagina</a>
-            </li>
-        </ul>
-    </div>
+    <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
 </template>
 <script>
 export default {
@@ -16,16 +10,16 @@ export default {
 }
 </script>
 <style scoped>
-#menu {
-    display: flex;
-    
+#nav {
+  padding: 30px;
 }
-ul {
-    list-style-type: none;
-    padding: 0;
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
-li {
-    display: inline-block;
-    margin: 0 10px;
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
